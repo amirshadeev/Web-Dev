@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f6f8fa;
+    color: #24292f;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.cta-btn {
+    padding: 12px 24px;
+    background: #2da44e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Pricing cards */
+.pricing {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.price {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.card button {
+    margin-top: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #8250df;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+/* Add-ons */
+.addons {
+    padding: 40px 20px;
+}
+
+.addons h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.addon-card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}
