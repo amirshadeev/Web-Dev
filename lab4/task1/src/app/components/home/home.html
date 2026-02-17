@@ -1,0 +1,11 @@
+<h2>Welcome!</h2>
+
+<p>This project was built following the official Angular tutorial.</p>
+
+<button (click)="show = !show">Toggle Products</button>
+
+<ul *ngIf="show">
+  <li *ngFor="let p of products">
+    {{ p.name }} - {{ p.price }} KZT
+  </li>
+</ul>
