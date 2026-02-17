@@ -1,0 +1,52 @@
+<div class="card">
+
+  <!-- 🔥 Галерея -->
+  <div class="gallery">
+
+    <!-- Главное изображение -->
+    <img class="main-img" [src]="currentImage" alt="product" />
+
+    <!-- Навигация -->
+    <div class="nav">
+      <button (click)="prevImage()">❮</button>
+      <button (click)="nextImage()">❯</button>
+
+
+    </div>
+
+    <!-- Миниатюры -->
+    <div class="thumbnails">
+      <img
+        *ngFor="let img of product.images; let i = index"
+        [src]="img"
+        [class.active]="i === currentImageIndex"
+        (click)="selectImage(i)"
+      />
+    </div>
+  </div>
+
+  <!-- Название -->
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+
+  <!-- Цена -->
+  <p class="price">{{ product.price }} ₸</p>
+
+  <!-- ⭐ Rating -->
+  <div class="rating">
+    <ng-container *ngFor="let star of starsArray; let i = index">
+      <span [class.filled]="i < product.rating">★</span>
+    </ng-container>
+    <span class="numeric">({{ product.rating }})</span>
+  </div>
+
+  <!-- Kaspi link -->
+  <a [href]="product.link" target="_blank">View on Kaspi</a>
+
+  <!-- Share buttons -->
+  <div class="buttons">
+    <button (click)="shareWhatsapp()">WhatsApp</button>
+    <button (click)="shareTelegram()">Telegram</button>
+  </div>
+
+</div>
