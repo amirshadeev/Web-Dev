@@ -1,0 +1,9 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;             /* расстояние между карточками */
+  padding: 30px;          /* отступы от краёв страницы */
+  justify-items: center;   /* центрируем карточки в колонках */
+  max-width: 1200px;       /* ограничение ширины всего блока */
+  margin: auto;            /* центрируем блок на странице */
+}
