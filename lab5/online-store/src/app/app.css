@@ -1,0 +1,36 @@
+/* Контейнер кнопок */
+.categories {
+  display: flex;
+  flex-wrap: wrap;       /* чтобы кнопки переносились на следующую строку */
+  gap: 12px;             /* расстояние между кнопками */
+  margin: 20px 0;
+  justify-content: center; /* выровнять по центру */
+}
+
+/* Сами кнопки */
+.categories button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;       /* закругление */
+  background-color: #0077ff; /* основной цвет */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease; /* плавный переход при наведении */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* лёгкая тень */
+}
+
+/* Эффект при наведении */
+.categories button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Активная кнопка */
+.categories button.active {
+  background-color: #25d366; /* зелёный цвет для выбранной категории */
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
